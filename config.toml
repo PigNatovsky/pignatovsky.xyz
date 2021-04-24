@@ -1,4 +1,4 @@
-baseurl      = "pignatovsky.xyz"
+baseurl      = "https://pignatovsky.xyz"
 title        = "PigNatovsky blog"
 languageCode = "en-us"
 theme        = "hello-friend-ng"
