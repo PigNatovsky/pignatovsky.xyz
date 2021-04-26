@@ -1,52 +1,58 @@
-baseurl      = "https://pignatovsky.xyz"
-title        = "PigNatovsky blog"
+baseurl = "/"
 languageCode = "en-us"
-theme        = "hello-friend-ng"
-paginate     = 10
+theme = "hello-friend"
+paginate = 5
 
 [params]
-  dateform        = "2 Jan, 2006"
-  dateformShort   = "2 Jan"
-  dateformNum     = "2-01-2006"
-  dateformNumTime = "2-01-2006 15:04"
+  # dir name of your blog content (default is `content/posts`).
+  # the list of set content will show up on your index page (baseurl).
+  contentTypeName = "posts"
 
-  # Subtitle for home
-  homeSubtitle = "Mostly techy things"
+  # "light" or "dark"
+  defaultTheme = "dark"
 
-  # Set disableReadOtherPosts to true in order to hide the links to other posts.
-  disableReadOtherPosts = false
+  # if you set this to 0, only submenu trigger will be visible
+  showMenuItems = 2
 
-  # Enable sharing buttons, if you like
-  enableSharingButtons = true
+  # Show reading time in minutes for posts
+  showReadingTime = true
 
-  # Metadata mostly used in document's head
-  description = "PigNatovsky's tech blog"
-  keywords = "homepage, blog"
-  images = [""]
+  # Show table of contents at the top of your posts (defaults to false)
+  # Alternatively, add this param to post front matter for specific posts
+  toc = false
 
-[taxonomies]
-    category = "blog"
-    tag      = "tags"
-    series   = "series"
+  # Show full page content in RSS feed items
+  #(default is Description or Summary metadata in the front matter)
+  # rssFullText = true
 
 [languages]
   [languages.en]
     title = "PigNatovsky's blog"
-    subtitle = "Have a nice lecture"
+    subtitle = "Nerdy place"
     keywords = ""
-    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    copyright = ""
+    menuMore = "Show more"
+    writtenBy = "Written by"
+    readMore = "Read more"
     readOtherPosts = "Read other posts"
+    newerPosts = "Newer posts"
+    olderPosts = "Older posts"
+    minuteReadingTime = "min read"
+    dateFormatSingle = "02-01-2006"
+    dateFormatList = "02-01-2006"
+    # leave empty to disable, enter display text to enable
+    # lastModDisplay = ""
 
     [languages.en.params.logo]
-      logoText = "/home/pignatovsky.xyz"
+      logoText = "/home/pignatovsky"
       logoHomeLink = "/"
     # or
     #
     # path = "/img/your-example-logo.svg"
     # alt = "Your example logo alt text"
 
-  # And you can even create generic menu
-  [[menu.main]]
-    identifier = "blog"
-    name       = "Blog"
-    url        = "/posts"
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about"
